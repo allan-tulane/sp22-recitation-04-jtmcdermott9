@@ -52,7 +52,7 @@ def test_word_count_map():
            [('i', 1), ('am', 1), ('sam', 1), ('i', 1), ('am', 1)]
 
 def word_count_reduce(group):
-    """
+  """
     Params:
       group...a tuple of the form (token, list_of_ones), indicating the number of times each word appears.
     Returns:
@@ -64,6 +64,8 @@ def word_count_reduce(group):
     NOTE: you should use call the `reduce` function here.
     """
     ###TODO
+  
+  
     
     
 def test_word_count_reduce():
@@ -153,3 +155,4 @@ def test_sentiment():
     result = run_map_reduce(sentiment_map, word_count_reduce, docs)
     assert result == [('negative', 3), ('positive', 3)]
 
+print(test_word_count_map())
