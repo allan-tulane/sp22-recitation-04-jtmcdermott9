@@ -1,6 +1,6 @@
 # CMPS 2200  Recitation 04
 
-**Name (Team Member 1):**_________________________  
+**Name (Team Member 1):**_JT MCDERMOTT______________  
 **Name (Team Member 2):**_________________________
 
 

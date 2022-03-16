@@ -26,7 +26,7 @@ def run_map_reduce(map_f, reduce_f, docs):
     return [reduce_f(g) for g in groups]
 
 def word_count_map(doc):
-    """
+  """
     Params:
       doc....a string to be split into tokens. split on whitespace.
     Returns:
@@ -36,7 +36,14 @@ def word_count_map(doc):
     >>> word_count_map('i am sam i am')
     [('i', 1), ('am', 1), ('sam', 1), ('i', 1), ('am', 1)]
     """
-    ###TODO
+  list1 = doc.split()
+  list2 = []
+  for token in list1:
+    tuple = (token, 1)
+    list2.append(tuple)
+  return list2
+  
+  
     
     
 
