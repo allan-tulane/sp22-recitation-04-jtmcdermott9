@@ -64,6 +64,8 @@ def word_count_reduce(group):
     NOTE: you should use call the `reduce` function here.
     """
     ###TODO
+  count = reduce(plus, 1, group[1])
+  return (group[0], count)
   
   
     
@@ -156,3 +158,5 @@ def test_sentiment():
     assert result == [('negative', 3), ('positive', 3)]
 
 print(test_word_count_map())
+print(word_count_reduce(('am',[1,1,1])))
+print(test_word_count())
