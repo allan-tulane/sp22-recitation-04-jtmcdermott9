@@ -168,7 +168,21 @@ def test_sentiment():
     result = run_map_reduce(sentiment_map, word_count_reduce, docs)
     assert result == [('negative', 3), ('positive', 3)]
 
-print(test_word_count_map())
-print(word_count_reduce(('am',[1,1,1])))
-print(test_word_count())
-print(sentiment_map(['it was terrible bad good great waste awesome']))
+#       TESTS            #
+#print(test_word_count_map())
+#print(word_count_reduce(('am',[1,1,1])))
+#print(test_word_count())
+'''print(sentiment_map(['it was not great but not terrible',
+        'thou art a boil a plague-sore or embossed carbuncle in my corrupted blood',
+        'it was a sockdolager of a good time']))
+
+'''
+print(sentiment_map(['it was a terrible waste of time']))
+#print(test_sentiment_map())
+docs = [
+        'it was not great but not terrible',
+        'thou art a boil a plague-sore or embossed carbuncle in my corrupted blood',
+        'it was a sockdolager of a good time'
+    ]
+print(sentiment_map(docs))
+#print(test_sentiment())
