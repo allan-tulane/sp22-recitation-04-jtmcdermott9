@@ -130,7 +130,7 @@ def reduce(f, id_, a):
 def sentiment_map(doc,
                   pos_terms=set(['good', 'great', 'awesome', 'sockdolager']),
                   neg_terms=set(['bad', 'terrible', 'waste', 'carbuncle', 'corrupted'])):
-    """
+  """
     Params:
       doc.........a string to be split into tokens. split on whitespace.
       pos_terms...a set of positive terms
@@ -142,6 +142,17 @@ def sentiment_map(doc,
     [('negative', 1), ('negative', 1)]
     """
     ###TODO
+  list = run_map_reduce(word_count_map, word_count_reduce, doc)
+  
+  outList = []
+  for i in list:
+    if i[0]  in pos_terms:
+      outList.append(('positive', 1))
+    if i[0]  in neg_terms:
+      outList.append(('negative', 1))
+  return outList
+    
+                   
 
 
 def test_sentiment_map():
@@ -160,3 +171,4 @@ def test_sentiment():
 print(test_word_count_map())
 print(word_count_reduce(('am',[1,1,1])))
 print(test_word_count())
+print(sentiment_map(['it was terrible bad good great waste awesome']))
